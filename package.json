@@ -1,5 +1,5 @@
 {
-  "name": "react-native-nordic-dfu",
+  "name": "@transmission-dynamics/react-native-nordic-dfu",
   "version": "3.3.0-td.1.0.2",
   "description": "Nordic Device Firmware Update for React Native",
   "main": "index.js",
