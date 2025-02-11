@@ -1,6 +1,6 @@
 import { EventSubscription } from "react-native";
 
-declare module "react-native-nordic-dfu" {
+declare module "@transmission-dynamics/react-native-nordic-dfu" {
   export class NordicDFU {
     static startDFU({
       deviceAddress,
