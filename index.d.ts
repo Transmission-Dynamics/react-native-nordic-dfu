@@ -1,3 +1,5 @@
+import { EventSubscription } from "react-native";
+
 declare module "react-native-nordic-dfu" {
   export class NordicDFU {
     static startDFU({
@@ -32,7 +34,7 @@ declare module "react-native-nordic-dfu" {
     static addListener(
       name: "DFUProgress" | "DFUStateChanged",
       handler: (update: IDfuUpdate) => void
-    ): void;
+    ): EventSubscription;
 
     static removeAllListeners(name: "DFUProgress" | "DFUStateChanged"): void;
   }

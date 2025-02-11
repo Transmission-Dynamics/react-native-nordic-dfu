@@ -3,6 +3,7 @@ package com.pilloxa.dfu;
 
 import android.app.NotificationManager;
 import android.content.Context;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import androidx.annotation.Nullable;
@@ -58,7 +59,7 @@ public class RNNordicDfuModule extends ReactContextBaseJavaModule implements Lif
         if (filePath.endsWith(".bin") || filePath.endsWith(".hex")) {
             starter.setBinOrHex(DfuBaseService.TYPE_APPLICATION, filePath).setInitFile(null, null);
         } else {
-            starter.setZip(filePath);
+            starter.setZip(Uri.parse(filePath));
         }
       
         final DfuServiceController controller = starter.start(this.reactContext, DfuService.class);
